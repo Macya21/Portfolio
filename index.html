@@ -7,7 +7,7 @@
     <title>Dopefolio</title>
     <meta name="description" content="Portfolio Template for Developer" />
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,6 +15,69 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
+    <style>
+      .window-header {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .window-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27ca3f; }
+
+        .code-content {
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .code-line {
+            margin-bottom: 8px;
+        }
+
+        .keyword { color: #ff79c6; }
+        .string { color: #f1fa8c; }
+        .comment { color: #6272a4; }
+        .function { color: #50fa7b; }
+
+      .hero-image {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .code-window {
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 100%;
+            transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
+            transition: transform 0.3s ease;
+        }
+
+        .code-window:hover {
+            transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1.05);
+        }
+      .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+    </style>
+
   </head>
   <body>
     <header class="header">
@@ -95,43 +158,39 @@
         </div>
         <div class="home-hero__cta">
           <a href="./#projects" class="btn btn--bg">Projects</a>
+          <br>
+          <br>
+          <br>
+          <br>
+          <div class="hero-image">
+                <div class="code-window floating">
+                    <div class="window-header">
+                        <div class="window-dot dot-red"></div>
+                        <div class="window-dot dot-yellow"></div>
+                        <div class="window-dot dot-green"></div>
+                    </div>
+                    <div class="code-content">
+                        <div class="code-line">
+                            <span class="keyword">const</span> <span class="function">developer</span> = {
+                        </div>
+                        <div class="code-line">
+                            &nbsp;&nbsp;name: <span class="string">"Rizky Luthfullah"</span>,
+                        </div>
+                        <div class="code-line">
+                            &nbsp;&nbsp;location: <span class="string">"Serang"</span>,
+                        </div>
+                        <div class="code-line">
+                            &nbsp;&nbsp;hobby: [<span class="string">"Fishing"</span>, <span class="string">"Swimming"</span>],
+                        </div>
+                        <div class="code-line">
+                            &nbsp;&nbsp;passion: <span class="string">"Creating unique websites"</span>
+                        </div>
+                        <div class="code-line">};</div>
+                    </div>
+                </div>
         </div>
       </div>
-      <div class="home-hero__socials">
-        <div class="home-hero__social">
-          <a href="#" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/twitter-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a href="#" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/whatsapp-logo.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a
-            href="#"
-            class="home-hero__social-icon-link home-hero__social-icon-link--bd-none"
-          >
-            <img
-              src="./assets/png/insta-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-      </div>
-      <div class="home-hero__mouse-scroll-cont">
-        <div class="mouse"></div>
-      </div>
+      
     </section>
     <section id="about" class="about sec-pad">
       <div class="main-container">
@@ -173,7 +232,7 @@
               <div class="skills__skill">CSS</div>
               <div class="skills__skill">JavaScript</div>
               <div class="skills__skill">Bootstrap</div>
-              <div class="skills__skill">GIT</div>
+              <div class="skills__skill">GIT</div> 
             </div>
           </div>
         </div>
@@ -321,3 +380,4 @@
     <script src="./index.js"></script>
   </body>
 </html>
+
