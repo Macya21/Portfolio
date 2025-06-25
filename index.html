@@ -15,69 +15,6 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
-    <style>
-      .window-header {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 15px;
-        }
-
-        .window-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-        }
-
-        .dot-red { background: #ff5f56; }
-        .dot-yellow { background: #ffbd2e; }
-        .dot-green { background: #27ca3f; }
-
-        .code-content {
-            font-family: 'Monaco', 'Menlo', monospace;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-        .code-line {
-            margin-bottom: 8px;
-        }
-
-        .keyword { color: #ff79c6; }
-        .string { color: #f1fa8c; }
-        .comment { color: #6272a4; }
-        .function { color: #50fa7b; }
-
-      .hero-image {
-            display: flex;
-            justify-content: center;
-            position: relative;
-        }
-
-        .code-window {
-            background: #1a1a1a;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            max-width: 400px;
-            width: 100%;
-            transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
-            transition: transform 0.3s ease;
-        }
-
-        .code-window:hover {
-            transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1.05);
-        }
-      .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-
-        @keyframes floating {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-
-    </style>
-
   </head>
   <body>
     <header class="header">
@@ -380,4 +317,5 @@
     <script src="./index.js"></script>
   </body>
 </html>
+
 
